@@ -5,12 +5,19 @@ import {
   StyleSheet,
   ScrollView,
   SafeAreaView,
+  TouchableOpacity,
 } from 'react-native';
 import { disclaimer } from '../data/legalData';
 
-export default function DisclaimerScreen() {
+export default function DisclaimerScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>← Буцах</Text>
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Хуулийн Анхааруулга</Text>
+      </View>
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.iconContainer}>
           <Text style={styles.icon}>⚠️</Text>
@@ -49,6 +56,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+  },
+  header: {
+    backgroundColor: '#e53e3e',
+    paddingTop: 50,
+    paddingBottom: 15,
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backButton: {
+    padding: 5,
+  },
+  backButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  headerTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '700',
+    marginLeft: 15,
   },
   scrollContent: {
     padding: 15,

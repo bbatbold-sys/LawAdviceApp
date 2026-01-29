@@ -29,7 +29,11 @@ export default function CategoryScreen({ route, navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>← Буцах</Text>
+        </TouchableOpacity>
         <Text style={styles.headerIcon}>{category.icon}</Text>
+        <Text style={styles.headerTitle}>{category.title}</Text>
         <Text style={styles.headerDescription}>{category.description}</Text>
       </View>
 
@@ -53,12 +57,30 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 20,
+    paddingTop: 50,
     backgroundColor: '#1a365d',
     alignItems: 'center',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 50,
+    left: 15,
+    padding: 10,
+  },
+  backButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
   headerIcon: {
     fontSize: 48,
     marginBottom: 10,
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#fff',
+    marginBottom: 5,
   },
   headerDescription: {
     fontSize: 14,
