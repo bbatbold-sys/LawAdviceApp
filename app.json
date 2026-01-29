@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Law Advice",
-    "slug": "law-advice-app",
+    "name": "Хууль Зөвлөгөө",
+    "slug": "LawAdviceApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,17 +16,24 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourname.lawadvice"
+      "bundleIdentifier": "com.bbatbold.lawadvice"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1a365d"
       },
-      "package": "com.yourname.lawadvice"
+      "package": "com.bbatbold.lawadvice"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "Хууль Зөвлөгөө",
+      "shortName": "Хууль",
+      "description": "Монгол хэл дээрх хуулийн зөвлөгөө",
+      "backgroundColor": "#1a365d",
+      "themeColor": "#1a365d"
     }
   }
 }
